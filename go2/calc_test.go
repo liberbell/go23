@@ -10,5 +10,10 @@ func TestAdd(t *testing.T) {
 }
 
 func TestSub(t *testing.T) {
+	got := calc.Sub(2, 1)
+	expected := 1
 
+	if got != expected {
+		t.Errorf("")
+	}
 }
