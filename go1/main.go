@@ -8,3 +8,7 @@ func main() {
 	fmt.Printf("adding %v and %v\n", x, y)
 	fmt.Println("result from operations: ", Add(x, y))
 }
+
+func Add(x, y int) int {
+	x + y
+}
