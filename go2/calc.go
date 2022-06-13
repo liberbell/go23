@@ -5,5 +5,5 @@ func Add(x, y int) int {
 }
 
 func Sub(x, y int) int {
-	return y + x
+	return y - x
 }
