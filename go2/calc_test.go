@@ -14,6 +14,6 @@ func TestSub(t *testing.T) {
 	expected := 1
 
 	if got != expected {
-		t.Errorf("")
+		t.Errorf("not expected result, got: %v expected: %v", got, expected)
 	}
 }
