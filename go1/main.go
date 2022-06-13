@@ -10,5 +10,7 @@ func main() {
 }
 
 func Add(x, y int) int {
-	x + y
+	res := x + y
+	res += 1
+	return res
 }
