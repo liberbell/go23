@@ -11,7 +11,7 @@ func bazz() {
 }
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("Hello world", "Test Test")
 
-	bazz()
+	// bazz()
 }
