@@ -1,6 +1,7 @@
 package calc_test
 
 import (
+	calc "calctest"
 	"calctest/calc"
 	"testing"
 )
@@ -32,5 +33,9 @@ func TestSubTable(t *testing.T) {
 		{x: 2, y: 1, expected: 1},
 		{x: 2, y: 2, expected: 0},
 		{x: 2, y: 3, expected: -1},
+	}
+
+	for _, val := range data {
+		got := calc.Sub(val.x, val.y)
 	}
 }
