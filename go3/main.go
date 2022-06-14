@@ -8,4 +8,6 @@ func bazz() {
 
 func main() {
 	fmt.Println("Hello world")
+
+	bazz()
 }
