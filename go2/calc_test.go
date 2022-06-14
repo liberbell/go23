@@ -1,5 +1,10 @@
 package calc_test
 
+import (
+	"calctest/calc"
+	"testing"
+)
+
 func TestAdd(t *testing.T) {
 	got := calc.Add(2, 1)
 	expected := 3
