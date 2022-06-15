@@ -4,10 +4,10 @@ import "fmt"
 
 func main() {
 	var (
-		i int = 1,
-		f64 float64 = 1.2,
-		s string = "test",
-		t, f bool = true, false
+		i    int     = 1
+		f64  float64 = 1.2
+		s    string  = "test"
+		t, f bool    = true, false
 	)
 
 	// var f bool = false
