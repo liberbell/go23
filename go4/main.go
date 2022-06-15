@@ -29,6 +29,7 @@ func main() {
 	// var f bool = false
 
 	fmt.Println(i, f64, s, t, f)
+	fmt.Printf("%T", f64)
 
 	foo()
 }
