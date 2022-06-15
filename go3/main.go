@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os/user"
 	"time"
 )
 
@@ -15,6 +16,7 @@ func bazz() {
 
 func main() {
 	fmt.Println("Hello world", "Test Test", time.Now())
+	fmt.Println(user.Current())
 
 	// bazz()
 }
