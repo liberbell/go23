@@ -11,10 +11,10 @@ func main() {
 	// )
 
 	var (
-		i    int
-		f64  float64
-		s    string
-		t, f bool
+		i    int     = 1
+		f64  float64 = 1.2
+		s    string  = "test"
+		t, f bool    = true, false
 	)
 
 	// var f bool = false
