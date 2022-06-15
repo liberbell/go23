@@ -20,4 +20,9 @@ func main() {
 	// var f bool = false
 
 	fmt.Println(i, f64, s, t, f)
+
+	xi = 1
+	xf64 = 1.2
+	xs = "test"
+	xb = true
 }
