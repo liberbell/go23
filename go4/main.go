@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+var (
+	i    int     = 1
+	f64  float64 = 1.2
+	s    string  = "test"
+	t, f bool    = true, false
+)
+
 func main() {
 	// var (
 	// 	i    int     = 1
@@ -9,13 +16,6 @@ func main() {
 	// 	s    string  = "test"
 	// 	t, f bool    = true, false
 	// )
-
-	var (
-		i    int     = 1
-		f64  float64 = 1.2
-		s    string  = "test"
-		t, f bool    = true, false
-	)
 
 	// var f bool = false
 
