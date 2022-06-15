@@ -9,7 +9,7 @@ const (
 	Password = "password"
 )
 
-var big int = 9223372036854774 + 1
+var big int = 9223372036854775807
 
 func main() {
 	fmt.Println(pi, Username, Password)
