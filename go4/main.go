@@ -17,6 +17,7 @@ func foo() {
 
 	fmt.Println(xi, xf64, xs, xt, xf)
 	fmt.Printf("%T\n", xf64)
+	fmt.Printf("%T\n", xi)
 }
 
 func main() {
