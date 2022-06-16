@@ -14,4 +14,7 @@ func main() {
 
 	fmt.Println(strings.Replace(s, "H", "A", 1))
 	fmt.Println(strings.Contains(s, "World"))
+
+	fmt.Println("Test" +
+		"Test")
 }
