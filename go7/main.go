@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	fmt.Println("Hello World.")
@@ -8,6 +11,6 @@ func main() {
 	fmt.Println(string("Hello World."[0]))
 
 	var s string = "Hello World."
-	s[0] = "A"
 
+	fmt.Println(strings.Replace(s, "H", "A", 1))
 }
