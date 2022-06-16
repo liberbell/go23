@@ -10,4 +10,6 @@ func main() {
 		c64 complex64 = -5 + 12i
 	)
 	fmt.Println(u8, i8, f32, c64)
+
+	fmt.Printf("%T, %v", u8, u8)
 }
