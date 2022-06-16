@@ -11,5 +11,5 @@ func main() {
 	)
 	fmt.Println(u8, i8, f32, c64)
 
-	fmt.Printf("%T, %v\n", u8, u8)
+	fmt.Printf("Type=%T, Value=%v\n", u8, u8)
 }
