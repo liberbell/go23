@@ -19,6 +19,8 @@ func main() {
 	// 	fmt.Println("\"")
 	// 	fmt.Println(`"`)
 
-	var t, f bool = true, false
+	// var t, f bool = true, false
+	// fmt.Println(t, f)
+	t, f := true, false
 	fmt.Println(t, f)
 }
