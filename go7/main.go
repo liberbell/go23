@@ -23,6 +23,6 @@ func main() {
 	// fmt.Println(t, f)
 	t, f := true, false
 	fmt.Println(t, f)
-	fmt.Printf("%T %v\n", t, t)
-	fmt.Printf("%T %v\n", f, f)
+	fmt.Printf("%T %v %t\n", t, t, t)
+	fmt.Printf("%T %v %t\n", f, f, 0)
 }
