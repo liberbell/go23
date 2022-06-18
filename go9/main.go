@@ -21,4 +21,7 @@ func main() {
 	fmt.Println(n)
 	fmt.Println(n[2])
 	fmt.Println(n[2:4])
+	fmt.Println(n[:2])
+	fmt.Println(n[2:])
+	fmt.Println(n[:])
 }
