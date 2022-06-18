@@ -21,4 +21,7 @@ func main() {
 		fmt.Println("Error")
 	}
 	fmt.Printf("%T %v\n", i, i)
+
+	h := "Hello World"
+	fmt.Println(h[0])
 }
