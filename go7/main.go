@@ -21,8 +21,13 @@ func main() {
 
 	// var t, f bool = true, false
 	// fmt.Println(t, f)
-	t, f := true, false
-	fmt.Println(t, f)
-	fmt.Printf("%T %v %t\n", t, t, t)
-	fmt.Printf("%T %v %t\n", f, f, 0)
+	// t, f := true, false
+	// fmt.Println(t, f)
+	// fmt.Printf("%T %v %t\n", t, t, t)
+	// fmt.Printf("%T %v %t\n", f, f, f)
+
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println((false && false))
+
 }
