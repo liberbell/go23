@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	var x int = 1
@@ -13,5 +16,6 @@ func main() {
 	fmt.Printf("%T %v %d\n", yy, yy, yy)
 
 	var s string = "14"
-	z = int(s)
+	i, _ := strconv.Atoi(s)
+	fmt.Printf("%T %v\n", i, i)
 }
