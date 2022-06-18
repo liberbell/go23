@@ -33,4 +33,7 @@ func main() {
 	fmt.Println(true || true)
 	fmt.Println(true || false)
 	fmt.Println(false || false)
+
+	fmt.Println(!true)
+	fmt.Println(!false)
 }
