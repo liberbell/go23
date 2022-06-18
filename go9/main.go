@@ -12,4 +12,8 @@ func main() {
 	var b [2]int = [2]int{100, 200}
 
 	fmt.Println(b)
+
+	var c []int = []int{100, 200}
+	c = append(c, 300)
+	fmt.Println(c)
 }
