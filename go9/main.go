@@ -19,4 +19,6 @@ func main() {
 
 	n := []int{1, 2, 3, 4, 5, 6}
 	fmt.Println(n)
+	fmt.Println(n[2])
+	fmt.Println(n[2:4])
 }
