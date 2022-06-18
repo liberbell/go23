@@ -16,6 +16,9 @@ func main() {
 	fmt.Printf("%T %v %d\n", yy, yy, yy)
 
 	var s string = "14"
-	i, _ := strconv.Atoi(s)
+	i, err := strconv.Atoi(s)
+	if err != nil {
+		fmt.Println("Error")
+	}
 	fmt.Printf("%T %v\n", i, i)
 }
