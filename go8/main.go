@@ -23,5 +23,5 @@ func main() {
 	fmt.Printf("%T %v\n", i, i)
 
 	h := "Hello World"
-	fmt.Println(h[0])
+	fmt.Println(string(h[0]))
 }
