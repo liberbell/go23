@@ -7,4 +7,6 @@ func main() {
 	fmt.Println(b)
 	fmt.Println(string(b))
 
+	c := []byte("HI")
+	fmt.Println(c)
 }
