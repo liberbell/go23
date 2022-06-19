@@ -10,4 +10,9 @@ func main() {
 	fmt.Println(m)
 	m["new"] = 400
 	fmt.Println(m)
+
+	fmt.Println(m["noitem"])
+
+	v, ok := m["apple"]
+	fmt.Println(v, ok)
 }
