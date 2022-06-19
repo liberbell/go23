@@ -21,4 +21,6 @@ func main() {
 	fmt.Println(m2)
 
 	var m3 map[string]int
+	m3["pc"] = 5000
+	fmt.Println(m3)
 }
