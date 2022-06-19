@@ -52,4 +52,11 @@ func main() {
 	fmt.Printf("len: %d, cap: %d, value: %v\n", len(b), cap(b), b)
 	var c []int
 	fmt.Printf("len: %d, cap: %d, value: %v\n", len(c), cap(c), c)
+
+	c = make([]int, 5)
+	for i := 0; i < 5; i++ {
+		c = append(c, i)
+		fmt.Println(c)
+	}
+	fmt.Println(c)
 }
