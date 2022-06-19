@@ -8,5 +8,5 @@ func add(x int, y int) {
 }
 
 func main() {
-
+	add(10, 20)
 }
