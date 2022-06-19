@@ -17,5 +17,6 @@ func main() {
 	r1, r2 := add(10, 20)
 	fmt.Println(r1, r2)
 
-	cal(100, 9)
+	r3 := cal(100, 9)
+	fmt.Println(r3)
 }
