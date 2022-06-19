@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func add(x int, y int) int16 {
+func add(x int, y int) int {
 	fmt.Println("Add function")
 	// fmt.Println(x + y)
 	return x + y
