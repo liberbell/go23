@@ -15,4 +15,10 @@ func main() {
 
 	v, ok := m["noitem"]
 	fmt.Println(v, ok)
+
+	m2 := make(map[string]int)
+	m2["pc"] = 5000
+	fmt.Println(m2)
+
+	var m3 map[string]int
 }
