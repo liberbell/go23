@@ -39,5 +39,5 @@ func main() {
 	// fmt.Println(n)
 
 	n := make([]int, 3, 5)
-	fmt.Printf("len: %d, cap: %c, value: %v", n, n, n)
+	fmt.Printf("len: %d, cap: %c, value: %v\n", len(n), cap(n), n)
 }
