@@ -13,6 +13,6 @@ func main() {
 
 	fmt.Println(m["noitem"])
 
-	v, ok := m["apple"]
+	v, ok := m["noitem"]
 	fmt.Println(v, ok)
 }
