@@ -20,7 +20,12 @@ func main() {
 	m2["pc"] = 5000
 	fmt.Println(m2)
 
-	var m3 map[string]int
-	m3["pc"] = 5000
-	fmt.Println(m3)
+	// var m3 map[string]int
+	// m3["pc"] = 5000
+	// fmt.Println(m3)
+
+	var s []int
+	if s == nil {
+		fmt.Println("Nil")
+	}
 }
