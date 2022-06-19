@@ -9,6 +9,6 @@ func add(x int, y int) (int, int) {
 }
 
 func main() {
-	result := add(10, 20)
-	fmt.Println(result)
+	r1, r2 := add(10, 20)
+	fmt.Println(r1, r2)
 }
