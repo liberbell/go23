@@ -8,4 +8,6 @@ func main() {
 	fmt.Println(m["apple"])
 	m["banana"] = 300
 	fmt.Println(m)
+	m["new"] = 400
+	fmt.Println(m)
 }
