@@ -42,6 +42,12 @@ func main() {
 	fmt.Printf("len: %d, cap: %d, value: %v\n", len(n), cap(n), n)
 	n = append(n, 0, 0)
 	fmt.Printf("len: %d, cap: %d, value: %v\n", len(n), cap(n), n)
-	n = append(n, 0, 0, 0, 0, 0)
+	n = append(n, 1, 2, 3, 4, 5)
 	fmt.Printf("len: %d, cap: %d, value: %v\n", len(n), cap(n), n)
+
+	a := make([]int, 3)
+	fmt.Printf("len: %d, cap: %d, value: %v\n", len(a), cap(a), a)
+
+	b := make([]int, 0)
+	fmt.Printf("len: %d, cap: %d, value: %v\n", len(b), cap(b), b)
 }
