@@ -13,6 +13,10 @@ func cal(price, item int) (result int) {
 	return result
 }
 
+func converter(price int) float64 {
+	return float64(price)
+}
+
 func main() {
 	r1, r2 := add(10, 20)
 	fmt.Println(r1, r2)
