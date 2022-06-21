@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+func by2(num int) string {
+	if num%2 == 0 {
+		return "Yes"
+	} else {
+		return "No"
+	}
+}
+
 func main() {
 	num := 9
 	if num%2 == 0 {
@@ -11,7 +19,7 @@ func main() {
 	} else {
 		fmt.Println("else")
 	}
-	x, y := 10, 10
+	x, y := 11, 12
 	if x == 10 && y == 10 {
 		fmt.Println("&&")
 	}
