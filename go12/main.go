@@ -28,4 +28,8 @@ func main() {
 		fmt.Println("Inner func", x)
 	}
 	f(5)
+
+	func(x int) {
+		fmt.Println("Inner func", x)
+	}(5)
 }
