@@ -28,5 +28,7 @@ func main() {
 	// }
 
 	result := by2(10)
-	fmt.Println(result)
+	if result == "Yes" {
+		fmt.Println("result: ", result)
+	}
 }
