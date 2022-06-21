@@ -31,4 +31,8 @@ func main() {
 	if result == "Yes" {
 		fmt.Println("result: ", result)
 	}
+
+	if result2 := by(10); result2 == "Yes" {
+		fmt.Println("Result is : ", result2)
+	}
 }
