@@ -15,4 +15,7 @@ func main() {
 	if x == 10 && y == 10 {
 		fmt.Println("&&")
 	}
+	if x == 10 || y == 10 {
+		fmt.Println("||")
+	}
 }
