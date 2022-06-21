@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func incrementgenerator() func() int {
+func incrementGenerator() func() int {
 	x := 0
 	return func() int {
 		x++
@@ -11,8 +11,8 @@ func incrementgenerator() func() int {
 }
 
 func main() {
-
-	fmt.Println(incrementgenerator())
-	fmt.Println(incrementgenerator())
-	fmt.Println(incrementgenerator())
+	counter := incrementGenerator()
+	fmt.Println(counter())
+	fmt.Println(counter())
+	fmt.Println(counter())
 }
