@@ -9,4 +9,6 @@ func main() {
 		return x
 	}
 	fmt.Println(increment())
+	fmt.Println(increment())
+	fmt.Println(increment())
 }
