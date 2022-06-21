@@ -14,4 +14,9 @@ func main() {
 		}
 		fmt.Println(i)
 	}
+
+	sum := 1
+	for sum < 10 {
+		fmt.Println(sum)
+	}
 }
