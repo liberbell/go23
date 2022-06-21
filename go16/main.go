@@ -8,6 +8,10 @@ func main() {
 			fmt.Println("Continue")
 			continue
 		}
+		if i > 5 {
+			fmt.Println("Break")
+			break
+		}
 		fmt.Println(i)
 	}
 }
