@@ -24,8 +24,8 @@ func main() {
 	r3 := cal(100, 9)
 	fmt.Println(r3)
 
-	f := func() {
-		fmt.Println("Inner func")
+	f := func(x int) {
+		fmt.Println("Inner func", x)
 	}
-	f()
+	f(5)
 }
