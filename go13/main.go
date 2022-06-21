@@ -2,13 +2,17 @@ package main
 
 import "fmt"
 
-func main() {
+func incrementgenerator() func() int {
 	x := 0
-	increment := func() int {
+	return func() int {
 		x++
 		return x
 	}
-	fmt.Println(increment())
-	fmt.Println(increment())
-	fmt.Println(increment())
+}
+
+func main() {
+
+	fmt.Println(incrementgenerator())
+	fmt.Println(incrementgenerator())
+	fmt.Println(incrementgenerator())
 }
