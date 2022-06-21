@@ -32,7 +32,7 @@ func main() {
 		fmt.Println("result: ", result)
 	}
 
-	if result2 := by(10); result2 == "Yes" {
+	if result2 := by2(10); result2 == "Yes" {
 		fmt.Println("Result is : ", result2)
 	}
 }
