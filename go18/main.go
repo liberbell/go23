@@ -1,21 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func getOsName() string {
 	return "mac"
 }
 
 func main() {
-	os := getOsName()
 
-	switch os {
+	switch os := getOsName(); os {
 	case "mac":
 		fmt.Println("Mac!")
 	case "windows":
 		fmt.Println("Windows!")
 	default:
-		fmt.Println("I don`t know.")
+		fmt.Println("I don`t know.", os)
 	}
+
+	t := time.Now()
+	fmt.Println(t.Hour())
 
 }
