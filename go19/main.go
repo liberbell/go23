@@ -9,9 +9,16 @@ func foo() {
 }
 
 func main() {
-	foo()
 
-	defer fmt.Println("Hello")
+	// defer fmt.Println("Hello")
 
-	fmt.Println("World")
+	// foo()
+
+	// fmt.Println("World")
+
+	fmt.Println("run")
+	defer fmt.Println(1)
+	defer fmt.Println(2)
+	defer fmt.Println(3)
+	fmt.Println("Success.")
 }
