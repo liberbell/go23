@@ -9,6 +9,8 @@ func foo() {
 }
 
 func main() {
+	foo()
+
 	defer fmt.Println("Hello")
 
 	fmt.Println("World")
