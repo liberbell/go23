@@ -21,10 +21,14 @@ func main() {
 	// }
 
 	t := time.Now()
-	fmt.Println(t.Hour())
+	// fmt.Println(t.Hour())
 	switch {
 	case t.Hour() < 12:
 		fmt.Println("Morning.")
+	case t.Hour() < 18:
+		fmt.Println("Afternoon.")
+	default:
+		fmt.Println("Night!")
 	}
 
 }
