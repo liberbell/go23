@@ -2,8 +2,12 @@ package main
 
 import "fmt"
 
+func getOsName() string {
+	return "mac"
+}
+
 func main() {
-	os := "mac"
+	os := getOsName()
 
 	switch os {
 	case "mac":
