@@ -25,7 +25,7 @@ func main() {
 	// defer fmt.Println(3)
 	// fmt.Println("Success.")
 
-	file, _ := os.Open("./lessoon.go")
+	file, _ := os.Open("./lesson.go")
 	defer file.Close()
 
 	data := make([]byte, 100)
