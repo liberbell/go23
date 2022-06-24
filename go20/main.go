@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("sample.txt")
+	_, err := os.Open("sample.txt")
 	if err != nil {
 		log.Fatalln("Exit", err)
 	}
