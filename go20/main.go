@@ -6,6 +6,10 @@ import (
 	"os"
 )
 
+func loggingSetting(logFile string) {
+	logFile, _ := os.OpenFile(logFile, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+}
+
 func main() {
 	_, err := os.Open("sample.txt")
 	if err != nil {
