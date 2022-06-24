@@ -15,6 +15,7 @@ func loggingSetting(logFile string) {
 }
 
 func main() {
+	loggingSetting("test.log")
 	_, err := os.Open("sample.txt")
 	if err != nil {
 		log.Fatalln("Exit", err)
