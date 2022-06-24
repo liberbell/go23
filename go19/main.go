@@ -29,4 +29,6 @@ func main() {
 	defer file.Close()
 
 	data := make([]byte, 100)
+	file.Read(data)
+	fmt.Println(string(data))
 }
