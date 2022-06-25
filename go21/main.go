@@ -18,4 +18,9 @@ func main() {
 		log.Fatalln("Error", err)
 	}
 	fmt.Println(count, string(data))
+
+	err = os.Chdir("test")
+	if err != nil {
+		log.Fatalln(err)
+	}
 }
