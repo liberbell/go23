@@ -4,8 +4,8 @@ func main() {
 	l := []int{100, 300, 23, 11, 23, 2, 4, 6, 4}
 	i := 0
 	for _, value := range l {
-		switch l[i] > value {
-		case condition:
+		switch l[i] {
+		case l[i] > value:
 
 		}
 	}
