@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 )
@@ -16,4 +17,5 @@ func main() {
 	if err != nil {
 		log.Fatalln("Error", err)
 	}
+	fmt.Println(count, string(data))
 }
