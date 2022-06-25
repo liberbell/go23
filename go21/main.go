@@ -21,6 +21,6 @@ func main() {
 
 	err = os.Chdir("test")
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatalln("Error!", err)
 	}
 }
