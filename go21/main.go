@@ -8,6 +8,8 @@ import (
 func main() {
 	file, err := os.Open("./sample.txt")
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatal("Error", err)
 	}
+	defer file.Close()
+	data := make([]byte, 0)
 }
