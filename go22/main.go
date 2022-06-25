@@ -7,6 +7,10 @@ func thirdPartyConnectDB() {
 }
 
 func save() {
+	defer func ()  {
+		s := recover()
+		fmt.Println(s)
+	}
 	thirdPartyConnectDB()
 }
 
