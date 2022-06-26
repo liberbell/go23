@@ -7,10 +7,10 @@ func main() {
 	i := 0
 	for _, value := range l {
 		// fmt.Println(l[i])
-		if l[i] > value {
+		if l[i] >= value {
 			fmt.Println(l[i], value)
 			result := value
-			fmt.Println(result)
+			fmt.Println("Value:", result)
 		}
 		if i < len(l) {
 			i = i + 1
