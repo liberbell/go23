@@ -10,4 +10,5 @@ func main() {
 	var p *int = &n
 
 	fmt.Println(p)
+	fmt.Println(*p)
 }
