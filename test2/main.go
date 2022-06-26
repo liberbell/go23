@@ -8,12 +8,13 @@ func main() {
 	for _, value := range l {
 		// fmt.Println(l[i])
 		if l[i] > value {
+			fmt.Println(l[i], value)
 			result := value
 			fmt.Println(result)
 		}
 		if i < len(l) {
 			i = i + 1
-			fmt.Println(l[i])
+			// fmt.Println(l[i])
 		} else {
 			fmt.Println("Result: ", l[i])
 		}
