@@ -13,6 +13,7 @@ func main() {
 			result = value
 		}
 		if index > len(l) {
+			fmt.Println("p1:", value)
 			if result < value {
 				result = value
 			}
