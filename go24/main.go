@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func one(x int) {
+func one(x *int) {
 	x = 1
 }
 
@@ -16,6 +16,6 @@ func main() {
 	// fmt.Println(p)
 	// fmt.Println(*p)
 
-	one(n)
+	one(&n)
 	fmt.Println(n)
 }
