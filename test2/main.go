@@ -11,12 +11,10 @@ func main() {
 		fmt.Println(index, value)
 		if index == 0 {
 			result = value
-			fmt.Println(index, value)
 		} else if result > value {
 			fmt.Println("p1:", value)
 			result = value
 		}
-		fmt.Println("Result:", result)
 		// 	if l[i] >= value {
 		// 		fmt.Println(l[i], value)
 		// 		result = value
@@ -41,4 +39,5 @@ func main() {
 		// 	}
 		// }
 	}
+	fmt.Println("Result:", result)
 }
