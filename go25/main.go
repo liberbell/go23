@@ -17,4 +17,6 @@ func main() {
 	s := make([]int, 0)
 	fmt.Printf("%T\n", s)
 
+	m := make(map[string])
+	fmt.Printf("%T\n", m)
 }
