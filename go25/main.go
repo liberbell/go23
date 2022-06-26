@@ -5,8 +5,8 @@ import "fmt"
 func main() {
 	var p *int = new(int)
 
-	fmt.Println(p)
+	fmt.Println(*p)
 
-	var p2 *int
-	fmt.Println(p2)
+	// 	var p2 *int
+	// 	fmt.Println(p2)
 }
