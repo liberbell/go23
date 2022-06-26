@@ -6,7 +6,7 @@ func main() {
 	l := []int{100, 300, 23, 11, 23, 2, 4, 6, 4}
 	i := 0
 	for _, value := range l {
-		fmt.Println(l[i])
+		// fmt.Println(l[i])
 		if l[i] > value {
 			result := value
 			fmt.Println(result)
