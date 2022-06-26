@@ -12,8 +12,9 @@ func main() {
 		if index == 0 {
 			result = value
 			fmt.Println(index, value)
-		} else if index > len(l) {
+		} else if result < value {
 			fmt.Println("p1:", value)
+			result = value
 		}
 		fmt.Println("Result:", result)
 		// 	if l[i] >= value {
