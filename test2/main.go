@@ -12,7 +12,7 @@ func main() {
 		if index == 0 {
 			result = value
 			fmt.Println(index, value)
-		} else if result < value {
+		} else if result > value {
 			fmt.Println("p1:", value)
 			result = value
 		}
