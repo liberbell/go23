@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func one(x *int) {
-	x = 1
+	*x = 1
 }
 
 func main() {
