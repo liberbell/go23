@@ -18,4 +18,6 @@ func main() {
 
 	one(&n)
 	fmt.Println(n)
+	fmt.Println(&n)
+	fmt.Println(*&n)
 }
