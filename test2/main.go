@@ -49,9 +49,11 @@ func main() {
 		"papaya": 500,
 		"kiwi":   90,
 	}
-
+	sum := 0
 	for index, value := range m {
 		fmt.Println(index, value)
+		sum = sum + value
 	}
+	fmt.Println(sum)
 
 }
