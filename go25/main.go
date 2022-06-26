@@ -22,4 +22,7 @@ func main() {
 
 	var p *int = new(int)
 	fmt.Printf("%T\n", p)
+
+	ch := make(chan, int)
+	fmt.Println("%T\n", ch)
 }
