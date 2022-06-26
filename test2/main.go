@@ -12,6 +12,11 @@ func main() {
 		if index == 0 {
 			result = value
 		}
+		if index > len(l) {
+			if result < value {
+				result = value
+			}
+		}
 		fmt.Println("Result:", result)
 		// 	if l[i] >= value {
 		// 		fmt.Println(l[i], value)
