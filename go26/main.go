@@ -24,10 +24,13 @@ func main() {
 
 	v4 := Vertex{}
 	fmt.Println(v4)
+	fmt.Printf("%T\n", v4)
 
 	var v5 Vertex
 	fmt.Println(v5)
+	fmt.Printf("%T\n", v5)
 
 	v6 := new(Vertex)
 	fmt.Println(v6)
+	fmt.Printf("%T\n", v6)
 }
