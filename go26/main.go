@@ -21,4 +21,7 @@ func main() {
 
 	v3 := Vertex{4, 8, "test"}
 	fmt.Println(v3)
+
+	v4 := Vertex{}
+	fmt.Println(v4)
 }
