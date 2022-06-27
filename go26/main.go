@@ -14,4 +14,7 @@ func main() {
 
 	v.X = 1000
 	fmt.Println(v)
+
+	v2 := Vertex{X: 200}
+	fmt.Println(v2)
 }
