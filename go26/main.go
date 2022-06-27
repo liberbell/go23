@@ -27,4 +27,7 @@ func main() {
 
 	var v5 Vertex
 	fmt.Println(v5)
+
+	v6 := new(Vertex)
+	fmt.Println(v6)
 }
