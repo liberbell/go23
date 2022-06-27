@@ -27,5 +27,5 @@ func main() {
 	fmt.Printf("%T\n", ch)
 
 	var st := new(struct{})
-	fmt.
+	fmt.Printf("%T\n", st)
 }
