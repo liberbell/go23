@@ -25,4 +25,7 @@ func main() {
 
 	ch := make(chan int)
 	fmt.Printf("%T\n", ch)
+
+	var st := new(struct{})
+	fmt.
 }
