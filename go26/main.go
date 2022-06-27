@@ -10,4 +10,8 @@ type Vertex struct {
 func main() {
 	v := Vertex{X: 10, Y: 20}
 	fmt.Println(v)
+	fmt.Println(v.X, v.Y)
+
+	v.X = 1000
+	fmt.Println(v)
 }
