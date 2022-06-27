@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Vertex struct {
 	X int
 	Y int
@@ -45,5 +47,6 @@ func main() {
 
 	// s := []int{}
 	// fmt.Println(s)
-
+	v := Vertex(1, 2, "test")
+	fmt.Println(v)
 }
