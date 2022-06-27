@@ -36,4 +36,7 @@ func main() {
 
 	v7 := &Vertex{}
 	fmt.Printf("%T %v\n", v7, v7)
+
+	s := []int{}
+	fmt.Println(s)
 }
