@@ -47,6 +47,7 @@ func main() {
 
 	// s := []int{}
 	// fmt.Println(s)
-	v := Vertex(1, 2, "test")
+	v := Vertex(X:1, Y:2, S:"test")
+	changeVertex(v)
 	fmt.Println(v)
 }
