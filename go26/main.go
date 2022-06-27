@@ -33,4 +33,7 @@ func main() {
 	v6 := new(Vertex)
 	fmt.Println(v6)
 	fmt.Printf("%T\n", v6)
+
+	v7 := &Vertex{}
+	fmt.Printf("%T %v\n", v7, v7)
 }
