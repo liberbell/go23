@@ -24,4 +24,7 @@ func main() {
 
 	v4 := Vertex{}
 	fmt.Println(v4)
+
+	var v5 Vertex
+	fmt.Println(v5)
 }
