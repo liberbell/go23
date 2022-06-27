@@ -5,6 +5,7 @@ import "fmt"
 type Vertex struct {
 	X int
 	Y int
+	S string
 }
 
 func main() {
@@ -17,4 +18,7 @@ func main() {
 
 	v2 := Vertex{X: 200}
 	fmt.Println(v2)
+
+	v3 := Vertex{4, 8, "test"}
+	fmt.Println(v3)
 }
