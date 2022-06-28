@@ -19,9 +19,14 @@ func (v *Vertex) Scale(i int) {
 	v.Y = v.Y * i
 }
 
+func New(x, y int) *Vertex {
+	return &Vertex{x, y}
+}
+
 func main() {
-	v := Vertex{3, 4}
+	// v := Vertex{3, 4}
 	// fmt.Println(Area(v))
+	v := New(3, 4)
 	v.Scale(10)
 	fmt.Println(v.Area())
 }
