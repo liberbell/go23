@@ -20,6 +20,7 @@ func main() {
 
 	i = *p1 + *p2
 	p2 = p1
+	fmt.Println(*p2)
 	j = *p2 + i
 	fmt.Println(j)
 }
