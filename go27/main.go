@@ -10,11 +10,18 @@ func Area(v Vertex) int {
 	return v.X * v.Y
 }
 
-func (v Vartex) Area() int {
+func (v Vertex) Area() int {
 	return v.X * v.Y
+}
+
+func (v *Vertex) Scale(i int) {
+	v.X = v.X * i
+	v.Y = v.Y * i
 }
 
 func main() {
 	v := Vertex{3, 4}
-	fmt.Println(Area(v))
+	// fmt.Println(Area(v))
+	v.Scale(10)
+	fmt.Println(v.Area())
 }
