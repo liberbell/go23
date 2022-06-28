@@ -50,4 +50,8 @@ func main() {
 	v := Vertex{X: 1, Y: 2, S: "test"}
 	changeVertex(v)
 	fmt.Println(v)
+
+	v2 := &Vertex{X: 1, Y: 2, S: "test"}
+	changeVertex(v2)
+	fmt.Println(v2)
 }
