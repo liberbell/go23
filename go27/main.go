@@ -10,6 +10,10 @@ func Area(v Vertex) int {
 	return v.X * v.Y
 }
 
+func (v Vartex) Area() int {
+	return v.X * v.Y
+}
+
 func main() {
 	v := Vertex{3, 4}
 	fmt.Println(Area(v))
