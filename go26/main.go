@@ -53,5 +53,5 @@ func main() {
 
 	v2 := &Vertex{X: 1, Y: 2, S: "test"}
 	changeVertex2(v2)
-	fmt.Println(v2)
+	fmt.Println(*v2)
 }
