@@ -8,6 +8,6 @@ func main() {
 
 	p = &i
 	var j int
-	j = p
+	j = *p
 	fmt.Println(j)
 }
