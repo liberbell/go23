@@ -19,6 +19,19 @@ func (v *Vertex) Scale(i int) {
 	v.Y = v.Y * i
 }
 
+type Vertex3D struct {
+	x, Y int
+}
+
+func (v Vertex) Area3D() int {
+	return v.x * v.Y
+}
+
+func (v *Vertex) Scale3D(i int) {
+	v.x = v.x * i
+	v.Y = v.Y * i
+}
+
 func New(x, y int) *Vertex {
 	return &Vertex{x, y}
 }
