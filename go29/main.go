@@ -15,6 +15,6 @@ func (p Person) Say() {
 }
 
 func main() {
-	var mike Human = Person("Mike")
+	var mike Human = Person{"Mile"}
 	mike.Say()
 }
