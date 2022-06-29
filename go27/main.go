@@ -44,4 +44,5 @@ func main() {
 	v := New(3, 4, 5)
 	v.Scale(10)
 	fmt.Println(v.Area())
+	fmt.Println(v.Area3D())
 }
