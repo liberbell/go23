@@ -31,10 +31,11 @@ func (v Vertex3D) Area3D() int {
 func (v *Vertex3D) Scale3D(i int) {
 	v.x = v.x * i
 	v.y = v.y * i
+	v.z = v.z * i
 }
 
-func New(x, y int) *Vertex {
-	return &Vertex{x, y}
+func New(x, y int) *Vertex3D {
+	return &Vertex3D{Vertex{x, y}, z}
 }
 
 func main() {
