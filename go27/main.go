@@ -3,33 +3,34 @@ package main
 import "fmt"
 
 type Vertex struct {
-	x, Y int
+	x, y int
 }
 
 func Area(v Vertex) int {
-	return v.x * v.Y
+	return v.x * v.y
 }
 
 func (v Vertex) Area() int {
-	return v.x * v.Y
+	return v.x * v.y
 }
 
 func (v *Vertex) Scale(i int) {
 	v.x = v.x * i
-	v.Y = v.Y * i
+	v.y = v.y * i
 }
 
 type Vertex3D struct {
-	x, Y int
+	Vertex
+	z int
 }
 
-func (v Vertex) Area3D() int {
-	return v.x * v.Y
+func (v Vertex3D) Area3D() int {
+	return v.x * v.y * v.z
 }
 
-func (v *Vertex) Scale3D(i int) {
+func (v *Vertex3D) Scale3D(i int) {
 	v.x = v.x * i
-	v.Y = v.Y * i
+	v.y = v.y * i
 }
 
 func New(x, y int) *Vertex {
