@@ -34,14 +34,14 @@ func (v *Vertex3D) Scale3D(i int) {
 	v.z = v.z * i
 }
 
-func New(x, y int) *Vertex3D {
+func New(x, y, z int) *Vertex3D {
 	return &Vertex3D{Vertex{x, y}, z}
 }
 
 func main() {
 	// v := Vertex{3, 4}
 	// fmt.Println(Area(v))
-	v := New(3, 4)
+	v := New(3, 4, 5)
 	v.Scale(10)
 	fmt.Println(v.Area())
 }
