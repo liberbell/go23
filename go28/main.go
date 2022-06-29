@@ -5,7 +5,8 @@ import "fmt"
 type Myint int
 
 func (i Myint) Double() int {
-	fmt.Printf("%T %v ", i, i)
+	fmt.Printf("%T %v\n", i, i)
+	fmt.Printf("%T %v\n", 1, 1)
 	return int(i * 2)
 }
 
