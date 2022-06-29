@@ -3,16 +3,17 @@ package main
 import "fmt"
 
 type Human interface {
-	Say()
+	Say() string
 }
 
 type Person struct {
 	Name string
 }
 
-func (p *Person) Say() {
+func (p *Person) Say() string {
 	p.Name = "Mr." + p.Name
-	fmt.Println(p.Name)
+	// fmt.Println(p.Name)
+	return p.Name
 }
 
 func DriveCar(human Human) {
