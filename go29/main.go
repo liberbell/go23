@@ -11,6 +11,7 @@ type Person struct {
 }
 
 func (p Person) Say() {
+	p.Name = "Mr." + p.Name
 	fmt.Println(p.Name)
 }
 
