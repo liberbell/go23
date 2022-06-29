@@ -15,6 +15,14 @@ func (p *Person) Say() {
 	fmt.Println(p.Name)
 }
 
+func DriveCar(human Human) {
+	if human.Say() == "Mr.Mike" {
+		fmt.Println("Run")
+	} else {
+		fmt.Println("Get out.")
+	}
+}
+
 func main() {
 	var mike Human = &Person{"Mike"}
 	mike.Say()
