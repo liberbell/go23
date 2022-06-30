@@ -32,6 +32,8 @@ func main() {
 	var mike Human = &Person{"Mike"}
 	// mike.Say()
 	var x Human = &Person{"X"}
+	var dog Dog = &Dog{"Dog"}
 	DriveCar(mike)
 	DriveCar(x)
+	DriveCar(dog)
 }
