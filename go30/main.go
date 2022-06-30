@@ -7,7 +7,7 @@ func do(i interface{}) {
 	// ii *= 2
 	// fmt.Println(ii)
 	ss := i.(string)
-	fmt.Println(ss)
+	fmt.Println(ss + "!")
 }
 
 func main() {
