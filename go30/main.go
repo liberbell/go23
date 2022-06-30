@@ -14,7 +14,7 @@ func do(i interface{}) {
 	case string:
 		fmt.Println(v + "!")
 	case bool:
-		fmt.Printf("unknown type %T %v\n", v, v)
+		fmt.Printf("unknown type Type:%T Value:%v\n", v, v)
 	}
 }
 
