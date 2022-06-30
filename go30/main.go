@@ -9,7 +9,8 @@ func do(i interface{}) {
 }
 
 func main() {
-	do(10)
+	var i interface{} = 10
+	do(i)
 	// do("Mike")
 	// do(true)
 }
