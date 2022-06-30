@@ -1,11 +1,14 @@
 package main
 
-func do(i interface{}) {
+import "fmt"
 
+func do(i interface{}) {
+	ii := i * 2
+	fmt.Println(ii)
 }
 
 func main() {
 	do(10)
-	do("Mike")
-	do(true)
+	// do("Mike")
+	// do(true)
 }
