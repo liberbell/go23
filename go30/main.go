@@ -23,4 +23,8 @@ func main() {
 	do(10)
 	do("Mike")
 	do(true)
+
+	var i int = 10
+	ii := float64(10)
+	fmt.Println(i, ii)
 }
