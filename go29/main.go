@@ -10,6 +10,10 @@ type Person struct {
 	Name string
 }
 
+type Dog struct {
+	Name string
+}
+
 func (p *Person) Say() string {
 	p.Name = "Mr." + p.Name
 	// fmt.Println(p.Name)
