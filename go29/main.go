@@ -26,6 +26,8 @@ func DriveCar(human Human) {
 
 func main() {
 	var mike Human = &Person{"Mike"}
-	mike.Say()
+	// mike.Say()
+	var x Human = &Person{"X"}
 	DriveCar(mike)
+	DriveCar(x)
 }
