@@ -7,7 +7,7 @@ type UserNotFount struct {
 }
 
 func (e *UserNotFount) Error() string {
-	return e.Username
+	return fmt.Sprintf("User not fouond: %v", e.Username)
 }
 
 func myFunc() error {
