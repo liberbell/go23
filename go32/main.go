@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type UserNotFount struct {
 	Username string
@@ -19,10 +22,14 @@ func myFunc() error {
 }
 
 func main() {
-	e1 := &UserNotFount{"mike"}
-	e2 := &UserNotFount{"mike"}
-	fmt.Println(e1 == e2)
-	if err := myFunc(); err != nil {
-		fmt.Println(err)
-	}
+	// e1 := &UserNotFount{"mike"}
+	// e2 := &UserNotFount{"mike"}
+	// fmt.Println(e1 == e2)
+	// if err := myFunc(); err != nil {
+	// 	fmt.Println(err)
+	// }
+
+	r := strings.NewReader("Hello Reader!")
+
+	b := make([]byte, 8)
 }
