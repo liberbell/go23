@@ -8,7 +8,8 @@ type Person struct {
 }
 
 func (p Person) String() string {
-	return fmt.Sprintf("My name is %v,\n", p.Name)
+	// return "My name is: " + p.Name
+	return fmt.Sprintf("My name is %v.", p.Name)
 }
 
 func main() {
