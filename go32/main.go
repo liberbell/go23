@@ -19,6 +19,9 @@ func myFunc() error {
 }
 
 func main() {
+	e1 := UserNotFount{"mike"}
+	e2 := UserNotFount{"mike"}
+	fmt.Println(e1 == e2)
 	if err := myFunc(); err != nil {
 		fmt.Println(err)
 	}
