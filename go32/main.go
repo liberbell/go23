@@ -11,7 +11,9 @@ func (e *UserNotFount) Error() string {
 }
 
 func myFunc() error {
-	return nil
+	if ok {
+		return nil
+	}
 }
 
 func main() {
