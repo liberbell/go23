@@ -14,6 +14,7 @@ func myFunc() error {
 	if ok {
 		return nil
 	}
+	return &UserNotFount{Username: "mike"}
 }
 
 func main() {
