@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+type UserNotFount struct {
+	Username string
+}
+
 func myFunc() error {
 	return nil
 }
