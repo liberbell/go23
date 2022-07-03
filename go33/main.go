@@ -20,6 +20,6 @@ func normal(s string) {
 }
 
 func main() {
-	goroutine("world")
+	go goroutine("world")
 	normal("hello")
 }
