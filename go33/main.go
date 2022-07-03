@@ -10,6 +10,7 @@ func goroutine(s string, wg *sync.WaitGroup) {
 		// time.Sleep(100 * time.Millisecond)
 		fmt.Println(s)
 	}
+	wg.Done()
 }
 
 func normal(s string) {
@@ -25,4 +26,5 @@ func main() {
 	go goroutine("world", &wg)
 	normal("hello")
 	// time.Sleep(1000 * time.Millisecond)
+	wg.Wait()
 }
