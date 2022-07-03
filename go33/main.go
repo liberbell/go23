@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func goroutine(s string) {
@@ -21,4 +22,5 @@ func normal(s string) {
 func main() {
 	go goroutine("world")
 	normal("hello")
+	time.Sleep(1000 * time.Millisecond)
 }
