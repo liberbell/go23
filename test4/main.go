@@ -13,7 +13,7 @@ func (r Vertex) Plus() int {
 }
 
 func (v Vertex) String() string {
-	return fmt.Sprintf("X is %v! Y is %v!\n", e.X, e.Y)
+	return fmt.Sprintf("X is %v! Y is %v!\n", v.X, v.Y)
 }
 
 func main() {
