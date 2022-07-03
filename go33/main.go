@@ -1,9 +1,17 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func normal(s string) {
 	for i := 0; i < 5; i++ {
-		time.Sleep(1000 * time.Millisecond)
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
 	}
+}
+
+func main() {
+	normal("hello")
 }
