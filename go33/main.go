@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"sync"
 )
 
 func goroutine(s string) {
@@ -20,7 +20,9 @@ func normal(s string) {
 }
 
 func main() {
+	var wg sync.WaitGroup
+	wg.Add(1)
 	go goroutine("world")
 	normal("hello")
-	time.Sleep(1000 * time.Millisecond)
+	// time.Sleep(1000 * time.Millisecond)
 }
