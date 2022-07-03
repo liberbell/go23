@@ -30,7 +30,7 @@ func main() {
 	// 	fmt.Println(err)
 	// }
 
-	r := strings.NewReader("Hello Reader!")
+	r := strings.NewReader("Hello, Reader!")
 
 	b := make([]byte, 8)
 	for {
