@@ -13,6 +13,8 @@ func (r Vertex) Plus() int {
 }
 
 func main() {
+	// v := Vertex{3, 4}
+	// fmt.Println(v.Plus())
 	v := Vertex{3, 4}
-	fmt.Println(v.Plus())
+	fmt.Println(v)
 }
