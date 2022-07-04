@@ -22,9 +22,13 @@ func main() {
 	s := []int{1, 2, 3, 4, 5}
 	c := make(chan int)
 	go goroutine1(s, c)
-	go goroutine2(s, c)
-	x := <-c
-	fmt.Println(x)
-	y := <-c
-	fmt.Println(y)
+	// go goroutine2(s, c)
+	// x := <-c
+	// fmt.Println(x)
+	// y := <-c
+	// fmt.Println(y)
+
+	for i := range c {
+		fmt.Println(i)
+	}
 }
