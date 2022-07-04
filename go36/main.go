@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 func producer(ch chan int, i int) {
@@ -27,4 +28,5 @@ func main() {
 	go consumper(ch, &wg)
 	wg.Wait()
 	close(ch)
+	time.Sleep(100 * time.Millisecond)
 }
