@@ -24,4 +24,6 @@ func main() {
 		go producer(ch, i)
 	}
 	go consumper(ch, &wg)
+	wg.Wait()
+	close(ch)
 }
