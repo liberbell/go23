@@ -14,6 +14,7 @@ func consumper(ch chan int, wg *sync.WaitGroup) {
 		fmt.Println("process:", i*1000)
 		wg.Done()
 	}
+	fmt.Println("#########")
 }
 
 func main() {
