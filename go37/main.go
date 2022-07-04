@@ -17,7 +17,7 @@ func multi2(first chan int, second chan int) {
 }
 
 func multi4(second chan int, third chan int) {
-	defer close(second)
+	defer close(third)
 	for i := range second {
 		third <- i * 4
 	}
