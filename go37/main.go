@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func producer(first chan int) {
 	defer close(first)
 	for i := 0; i < 10; i++ {
@@ -17,7 +19,7 @@ func multi2(first chan int, second chan int) {
 func multi4(second chan int, third chan int) {
 	defer close(second)
 	for i := range second {
-		third <- i * 2
+		third <- i * 4
 	}
 }
 
@@ -29,5 +31,9 @@ func main() {
 	go producer(first)
 	go multi2(first, second)
 	go multi4(second, third)
+
+	for result := range third {
+		fmt.Println(result)
+	}
 
 }
