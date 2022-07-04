@@ -22,7 +22,7 @@ func goroutine2(s []int, c chan int) {
 
 func main() {
 	s := []int{1, 2, 3, 4, 5}
-	c := make(chan int)
+	c := make(chan int, len(s))
 	go goroutine1(s, c)
 	// go goroutine2(s, c)
 	// x := <-c
