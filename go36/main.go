@@ -1,7 +1,18 @@
 package main
 
+import (
+	"fmt"
+	"sync"
+)
+
 func producer(ch chan int, i int) {
-	ch <- i
+	ch <- i * 2
+}
+
+func consumper(ch chan int, wg *sync.WaitGroup) {
+	for i := range ch {
+		fmt.Println("process:", i*1000)
+	}
 }
 
 func main() {
