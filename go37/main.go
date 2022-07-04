@@ -14,8 +14,11 @@ func multi2(first chan int, second chan int) {
 	}
 }
 
-func multi4(first chan int, second chan int, third chan int) {
-
+func multi4(second chan int, third chan int) {
+	defer close(second)
+	for i := range second {
+		third <- i * 2
+	}
 }
 
 func main() {
@@ -25,5 +28,6 @@ func main() {
 
 	go producer(first)
 	go multi2(first, second)
+	go multi4(second, third)
 
 }
