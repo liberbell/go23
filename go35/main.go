@@ -13,6 +13,7 @@ func main() {
 	// fmt.Println(x)
 	// ch <- 300
 	// fmt.Println(len(ch))
+	close(ch)
 	for c := range ch {
 		fmt.Println(c)
 	}
