@@ -14,11 +14,16 @@ func multi2(first chan int, second chan int) {
 	}
 }
 
+func multi4(first chan int, second chan int, third chan int) {
+
+}
+
 func main() {
 	first := make(chan int)
 	second := make(chan int)
 	third := make(chan int)
 
 	go producer(first)
+	go multi2(first, second)
 
 }
