@@ -6,8 +6,9 @@ func goroutine1(s []int, c chan int) {
 	sum := 0
 	for _, v := range s {
 		sum += v
+		c <- sum
 	}
-	c <- sum
+	close(c)
 }
 
 func goroutine2(s []int, c chan int) {
