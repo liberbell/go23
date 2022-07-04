@@ -9,8 +9,11 @@ func main() {
 	ch <- 200
 	fmt.Println(len(ch))
 
-	x := <-ch
-	fmt.Println(x)
-	ch <- 300
-	fmt.Println(len(ch))
+	// x := <-ch
+	// fmt.Println(x)
+	// ch <- 300
+	// fmt.Println(len(ch))
+	for c := range ch {
+		fmt.Println(c)
+	}
 }
