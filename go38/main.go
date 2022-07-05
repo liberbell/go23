@@ -1,11 +1,20 @@
 package main
 
+import "time"
+
 func goroutine(s []int, c chan int) {
 	sum := 0
 	for _, v := range s {
 		sum += v
 	}
 	c <- sum
+}
+
+func goroutine1(ch chan string) {
+	for {
+		ch <- "packet from 1"
+		time.Sleep(1000 * time.Millisecond)
+	}
 }
 
 func main() {
@@ -20,4 +29,6 @@ func main() {
 	// fmt.Println(y)
 	c1 := make(chan string)
 	c2 := make(chan string)
+
+	go goroutine()
 }
