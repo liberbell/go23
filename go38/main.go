@@ -17,6 +17,10 @@ func goroutine1(ch chan string) {
 	}
 }
 
+func goroutine2(ch chan string) {
+
+}
+
 func main() {
 	// s := []int{1, 2, 3, 4, 5}
 	// c := make(chan int)
