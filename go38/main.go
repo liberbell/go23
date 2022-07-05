@@ -37,5 +37,6 @@ func main() {
 	c1 := make(chan string)
 	c2 := make(chan string)
 
-	go goroutine()
+	go goroutine1(c1)
+	go goroutine2(c2)
 }
