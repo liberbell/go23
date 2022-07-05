@@ -18,7 +18,10 @@ func goroutine1(ch chan string) {
 }
 
 func goroutine2(ch chan string) {
-
+	for {
+		ch <- "packet from 2"
+		time.Sleep(1000 * time.Millisecond)
+	}
 }
 
 func main() {
