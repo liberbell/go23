@@ -20,9 +20,9 @@ func goroutine1(ch chan string) {
 	}
 }
 
-func goroutine2(ch chan string) {
+func goroutine2(ch chan int) {
 	for {
-		ch <- "packet from 2"
+		ch <- 100
 		time.Sleep(1000 * time.Millisecond)
 	}
 }
@@ -38,7 +38,7 @@ func main() {
 	// y := <-c
 	// fmt.Println(y)
 	c1 := make(chan string)
-	c2 := make(chan string)
+	c2 := make(chan int)
 
 	go goroutine1(c1)
 	go goroutine2(c2)
