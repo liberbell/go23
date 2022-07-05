@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func goroutine(s []int, c chan int) {
 	sum := 0
 	for _, v := range s {
@@ -13,4 +15,9 @@ func main() {
 	c := make(chan int)
 	go goroutine(s, c)
 	go goroutine(s, c)
+
+	x := <-c
+	fmt.Println(x)
+	y := <-c
+	fmt.Println(y)
 }
