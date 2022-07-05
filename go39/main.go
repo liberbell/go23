@@ -10,8 +10,8 @@ func main() {
 	boom := time.After(500 * time.Millisecond)
 	for {
 		select {
-		case <-tick:
-			fmt.Println("Tick!")
+		case t := <-tick:
+			fmt.Println("Tick!", t)
 		case <-boom:
 			fmt.Println("Boom!")
 			return
