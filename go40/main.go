@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"time"
+)
+
 func main() {
 	c := make(map[string]int)
 	go func() {
@@ -13,4 +18,7 @@ func main() {
 			c["key"] += 1
 		}
 	}()
+
+	time.Sleep(100 * time.Millisecond)
+	fmt.Println(c, c["key"])
 }
