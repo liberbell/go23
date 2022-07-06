@@ -28,16 +28,18 @@ func main() {
 	// c := make(map[string]int)
 	go func() {
 		for i := 0; i < 10; i++ {
-			c["key"] += 1
+			// c["key"] += 1
+			c.Inc("key")
 		}
 	}()
 
 	go func() {
 		for i := 0; i < 10; i++ {
-			c["key"] += 1
+			// c["key"] += 1
+			c.Inc("key")
 		}
 	}()
 
 	time.Sleep(1 * time.Second)
-	fmt.Println(c, c["key"])
+	fmt.Println(c, c.Value("key"))
 }
