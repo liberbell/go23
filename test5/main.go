@@ -8,6 +8,7 @@ func goroutine(s []string, c chan string) {
 		sum += v
 		c <- sum
 	}
+	close(c)
 }
 
 func main() {
