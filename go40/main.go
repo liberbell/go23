@@ -24,7 +24,8 @@ func (c *Counter) Value(key string) int {
 }
 
 func main() {
-	c := make(map[string]int)
+	c := Counter{v: make(map[string]int)}
+	// c := make(map[string]int)
 	go func() {
 		for i := 0; i < 10; i++ {
 			c["key"] += 1
