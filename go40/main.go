@@ -13,8 +13,14 @@ type Counter struct {
 
 func (c *Counter) Inc(key string) {
 	c.mux.Lock()
+	defer c.mux.Unlock()
 	c.v[key]++
-	c.mux.Unlock()
+}
+
+func (c *Counter) Value(key string) int {
+	c.mux.Lock()
+	defer c.mux.Unlock()
+	return c.v[key]++
 }
 
 func main() {
