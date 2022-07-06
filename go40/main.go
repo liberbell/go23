@@ -19,6 +19,6 @@ func main() {
 		}
 	}()
 
-	time.Sleep(100 * time.Millisecond)
+	time.Sleep(1 * time.Second)
 	fmt.Println(c, c["key"])
 }
