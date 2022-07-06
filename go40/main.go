@@ -20,7 +20,7 @@ func (c *Counter) Inc(key string) {
 func (c *Counter) Value(key string) int {
 	c.mux.Lock()
 	defer c.mux.Unlock()
-	return c.v[key]++
+	return c.v[key]
 }
 
 func main() {
