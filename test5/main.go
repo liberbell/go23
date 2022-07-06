@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func goroutine(s []string, c chan int) {
+func goroutine(s []string, c chan string) {
 	sum := ""
 	for _, v := range s {
 		sum += v
