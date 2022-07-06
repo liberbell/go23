@@ -2,8 +2,14 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"time"
 )
+
+type counter struct {
+	v   map[string]int
+	mux sync.Mutex
+}
 
 func main() {
 	c := make(map[string]int)
