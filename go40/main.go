@@ -14,6 +14,7 @@ type Counter struct {
 func (c *Counter) Inc(key string) {
 	c.mux.Lock()
 	c.v[key]++
+	c.mux.Unlock()
 }
 
 func main() {
