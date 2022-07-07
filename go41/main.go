@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go41/mylib"
+	"go41/mylib/under"
 )
 
 func main() {
@@ -10,4 +11,5 @@ func main() {
 	fmt.Println(mylib.Average(s))
 
 	mylib.Say()
+	under.Hello()
 }
