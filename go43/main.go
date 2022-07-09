@@ -25,4 +25,10 @@ func main() {
 
 	fss := r2.FindStringSubmatch("/view/test")
 	fmt.Println(fss)
+
+	fss = r2.FindStringSubmatch("/edit/test")
+	fmt.Println(fss)
+
+	fss = r2.FindStringSubmatch("/save/test")
+	fmt.Println(fss)
 }
