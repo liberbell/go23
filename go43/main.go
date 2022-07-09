@@ -19,5 +19,7 @@ func main() {
 	ms := r.MatchString("apple")
 	fmt.Println(ms)
 
-	r2 := regexp.MustCompile("^/(edit|save|view)/([a-z])")
+	r2 := regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
+	fs := r2.MatchString("/view/test")
+	fmt.Println(fs)
 }
