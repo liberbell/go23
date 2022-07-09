@@ -16,5 +16,5 @@ func main() {
 	fmt.Println(person)
 
 	fmt.Println(mylib.Public)
-	fmt.Println(mylib.private)
+	// fmt.Println(mylib.private)
 }
