@@ -16,5 +16,6 @@ func main() {
 	fmt.Println(match)
 
 	r := regexp.MustCompile("a([a-z]+)e")
-	r.MatchString("apple")
+	ms := r.MatchString("apple")
+	fmt.Println(ms)
 }
