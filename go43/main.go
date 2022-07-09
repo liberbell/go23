@@ -20,6 +20,6 @@ func main() {
 	fmt.Println(ms)
 
 	r2 := regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
-	fs := r2.MatchString("/view/test")
+	fs := r2.FindString("/view/test")
 	fmt.Println(fs)
 }
