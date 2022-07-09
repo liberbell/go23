@@ -18,4 +18,6 @@ func main() {
 	r := regexp.MustCompile("a([a-z]+)e")
 	ms := r.MatchString("apple")
 	fmt.Println(ms)
+
+	r2 := regexp.MustCompile("^/(edit|save|view)/([a-z])")
 }
