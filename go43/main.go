@@ -12,6 +12,9 @@ func main() {
 	// fmt.Println(t.Year())
 	// fmt.Println(t.Month())
 	// fmt.Println(t.Hour())
-	match, _ := regexp.MatchString("a([a-z0-9]+)e", "appl0e")
+	match, _ := regexp.MatchString("a([a-z]+)e", "apple")
 	fmt.Println(match)
+
+	r := regexp.MustCompile("a([a-z]+)e")
+	r.MatchString("apple")
 }
