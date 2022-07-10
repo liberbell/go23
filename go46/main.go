@@ -15,4 +15,12 @@ func lognProcess(ch chan string) {
 func main() {
 	ch := make(chan string)
 	go lognProcess(ch)
+
+	for {
+		select {
+		case <-ch:
+			fmt.Println("success")
+			return
+		}
+	}
 }
