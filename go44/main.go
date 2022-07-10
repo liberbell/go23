@@ -19,5 +19,6 @@ func main() {
 	}
 	fmt.Println(i, s, p)
 	sort.Ints(i)
-	fmt.Println(i)
+	sort.Strings(s)
+	fmt.Println(i, s)
 }
