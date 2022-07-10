@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"time"
 )
@@ -14,7 +15,9 @@ func lognProcess(ch chan string) {
 
 func main() {
 	ch := make(chan string)
-	go lognProcess(ch)
+	ctx := context.Background()
+	ctx, cancel := context.WithTimeout(ctx, 3*time.Second)
+	go lognProcess(ctx, ch)
 
 	for {
 		select {
