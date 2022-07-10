@@ -8,7 +8,7 @@ import (
 
 func lognProcess(ctx context.Context, ch chan string) {
 	fmt.Println("Run")
-	time.Sleep(2 * time.Second)
+	time.Sleep(3 * time.Second)
 	fmt.Println("Finish")
 	ch <- "result"
 }
@@ -24,6 +24,7 @@ func main() {
 		select {
 		case <-ctx.Done():
 			fmt.Println(ctx.Err())
+			return
 		case <-ch:
 			fmt.Println("success")
 			return
