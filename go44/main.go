@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	i := []int{5, 3, 2, 8, 7}
@@ -15,4 +18,6 @@ func main() {
 		{"Elton", 69},
 	}
 	fmt.Println(i, s, p)
+	sort.Ints(i)
+	fmt.Println(i)
 }
