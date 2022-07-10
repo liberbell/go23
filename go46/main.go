@@ -20,14 +20,16 @@ func main() {
 	defer cancel()
 	go lognProcess(ctx, ch)
 
+CTXLOOP:
 	for {
 		select {
 		case <-ctx.Done():
 			fmt.Println(ctx.Err())
-			return
+			break CTXLOOP
 		case <-ch:
 			fmt.Println("success")
-			return
+			break CTXLOOP
 		}
 	}
+	fmt.Println("End of Loop.")
 }
