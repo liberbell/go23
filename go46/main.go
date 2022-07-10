@@ -11,3 +11,8 @@ func lognProcess(ch chan string) {
 	fmt.Println("Finish")
 	ch <- "result"
 }
+
+func main() {
+	ch := make(chan string)
+	go lognProcess(ch)
+}
