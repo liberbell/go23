@@ -9,10 +9,10 @@ func main() {
 		Name string
 		Age  int
 	}{
-		{"Bob": 43},
-		{"Eric": 73},
-		{"Alex": 34},
-		{"Elton": 69},
+		{"Bob", 43},
+		{"Eric", 73},
+		{"Alex", 34},
+		{"Elton", 69},
 	}
 	fmt.Println(i, s, p)
 }
