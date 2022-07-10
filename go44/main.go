@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	i := []int{5, 3, 2, 8, 7}
 	s := []string{"d", "a", "f"}
@@ -12,5 +14,5 @@ func main() {
 		{"Alex": 34},
 		{"Elton": 69},
 	}
-
+	fmt.Println(i, s, p)
 }
