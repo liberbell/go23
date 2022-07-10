@@ -20,5 +20,6 @@ func main() {
 	fmt.Println(i, s, p)
 	sort.Ints(i)
 	sort.Strings(s)
-	fmt.Println(i, s)
+	sort.Slice(p, func(i, j int) bool { return p[i].Name < p[j].Name })
+	fmt.Println(i, s, p)
 }
