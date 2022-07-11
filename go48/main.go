@@ -23,5 +23,8 @@ func main() {
 	req, _ := http.NewRequest("GET", endpoint, nil)
 	req.Header.Add("Any-header", "apple/chrome")
 	q := req.URL.Query()
-	fmt.Println(q)
+	fmt.Println(q, q.Encode())
+	q.Add("c", "3")
+	req.URL.RawQuery = q.Encode()
+	fmt.Println(q, q.Encode())
 }
