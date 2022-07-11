@@ -11,7 +11,7 @@ func main() {
 
 	// body, _ := ioutil.ReadAll(resp.Body)
 	// fmt.Println(string(body))
-	base, err := url.Parse("https://goog le.com")
+	base, err := url.Parse("https://google.com")
 	if err != nil {
 		fmt.Println(err)
 	}
