@@ -8,7 +8,7 @@ import (
 type Person struct {
 	Name      string
 	Age       int
-	nicknames []string
+	Nicknames []string
 }
 
 func main() {
@@ -17,5 +17,6 @@ func main() {
 	if err := json.Unmarshal(b, &p); err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println(p.Name, p.Age, p.Nicknames)
 
 }
