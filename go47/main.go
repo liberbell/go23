@@ -1,20 +1,23 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io/ioutil"
-	"log"
 )
 
 func main() {
-	content, err := ioutil.ReadFile("main.go")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(content)
+	// content, err := ioutil.ReadFile("main.go")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Println(content)
 
-	if err := ioutil.WriteFile("ioutil_temp.go", content, 0666); err != nil {
-		log.Fatalln(err)
-	}
+	// if err := ioutil.WriteFile("ioutil_temp.go", content, 0666); err != nil {
+	// 	log.Fatalln(err)
+	// }
+	r := bytes.NewBuffer([]byte("abc"))
+	content, _ := ioutil.ReadAll(r)
+	fmt.Println(string(content))
 
 }
