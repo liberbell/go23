@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"net/url"
 )
@@ -24,7 +25,12 @@ func main() {
 	req.Header.Add("Any-header", "apple/chrome")
 	q := req.URL.Query()
 	fmt.Println(q, q.Encode())
-	q.Add("c", "3")
+	q.Add("c", "3&%")
 	req.URL.RawQuery = q.Encode()
 	fmt.Println(q, q.Encode())
+
+	var client *http.Client = &http.Client{}
+	resp, _ := client.Do(req)
+	body, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(body)
 }
