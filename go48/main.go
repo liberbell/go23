@@ -15,6 +15,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	reference, _ := url.Parse("/")
-	fmt.Println(base)
+	reference, _ := url.Parse("/test?a=1&b=2")
+	endpoint := base.ResolveReference(reference).String()
+	fmt.Println(endpoint)
 }
