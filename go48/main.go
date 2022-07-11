@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -21,7 +22,8 @@ func main() {
 	endpoint := base.ResolveReference(reference).String()
 	fmt.Println(endpoint)
 
-	req, _ := http.NewRequest("GET", endpoint, nil)
+	// req, _ := http.NewRequest("GET", endpoint, nil)
+	req, _ := http.NewRequest("POST", endpoint, bytes.NewBuffer([]byte("date")))
 	req.Header.Add("Any-header", "apple/chrome")
 	q := req.URL.Query()
 	fmt.Println(q, q.Encode())
