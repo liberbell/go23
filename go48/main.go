@@ -32,5 +32,5 @@ func main() {
 	var client *http.Client = &http.Client{}
 	resp, _ := client.Do(req)
 	body, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(body)
+	fmt.Println(string(body))
 }
