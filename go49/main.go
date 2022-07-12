@@ -5,10 +5,14 @@ import (
 	"fmt"
 )
 
+type T struct {
+}
+
 type Person struct {
 	Name      string   `json:"name,omitempty"`
 	Age       int      `json:"age,omitempty"`
 	Nicknames []string `json:"nicknames"`
+	T         T        `json:"T"`
 }
 
 func main() {
