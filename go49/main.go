@@ -6,9 +6,9 @@ import (
 )
 
 type Person struct {
-	Name      string
-	Age       int
-	Nicknames []string
+	Name      string   `json:"name"`
+	Age       int      `json:"age"`
+	Nicknames []string `json:"nicknames"`
 }
 
 func main() {
