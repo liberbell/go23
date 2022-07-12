@@ -12,7 +12,7 @@ type Person struct {
 }
 
 func main() {
-	b := []byte(`{"name":"Elton", "Age":72, "nicknames": ["a", "b", "c"]}`)
+	b := []byte(`{"name":"Elton", "age":72, "nicknames": ["a", "b", "c"]}`)
 	var p Person
 	if err := json.Unmarshal(b, &p); err != nil {
 		fmt.Println(err)
