@@ -24,6 +24,19 @@ type Person struct {
 // 	return v, err
 // }
 
+func (p *Person) UnmarshalJSON(b []byte) error {
+	type Person2 struct {
+		Name string
+	}
+	var p2 Person2
+	err := json.Unmarshal(b, &p2)
+	if err != nil {
+		fmt.Println(err)
+	}
+	p.Name = p2.Name
+	return err
+}
+
 func main() {
 	b := []byte(`{"name":"Elton", "age":20, "nicknames": ["a", "b", "c"]}`)
 	var p Person
