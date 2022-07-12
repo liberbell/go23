@@ -19,4 +19,6 @@ func main() {
 	}
 	fmt.Println(p.Name, p.Age, p.Nicknames)
 
+	v, _ := json.Marshal(p)
+	fmt.Println(string(v))
 }
