@@ -7,8 +7,9 @@ import (
 	"fmt"
 )
 
-var DB = map[string]string {
-	"User1Key": "User1Secret"
+var DB = map[string]string{
+	"User1Key": "User1Secret",
+	"User2Key": "User2Secret",
 }
 
 func main() {
