@@ -15,6 +15,15 @@ type Person struct {
 	T         *T       `json:"T,omitempty"`
 }
 
+func (p Person) MarshalJSON() ([]byte, error) {
+	v, err := json.Marshal(&struct {
+		Name string
+	}{
+		Name: "Mr." + p.Name
+	})
+	return v, err
+}
+
 func main() {
 	b := []byte(`{"name":"Elton", "age":20, "nicknames": ["a", "b", "c"]}`)
 	var p Person
