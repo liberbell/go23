@@ -7,6 +7,10 @@ import (
 	"fmt"
 )
 
+var DB = map[string]string {
+	"User1Key": "User1Secret"
+}
+
 func main() {
 	const apiKey = "User1Key"
 	const apiSecret = "User1Secret"
