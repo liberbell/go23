@@ -12,7 +12,7 @@ type Person struct {
 	Name      string   `json:"name,omitempty"`
 	Age       int      `json:"age,omitempty"`
 	Nicknames []string `json:"nicknames"`
-	T         T        `json:"T"`
+	T         *T       `json:"T,omitempty"`
 }
 
 func main() {
