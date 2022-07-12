@@ -33,7 +33,7 @@ func (p *Person) UnmarshalJSON(b []byte) error {
 	if err != nil {
 		fmt.Println(err)
 	}
-	p.Name = p2.Name
+	p.Name = p2.Name + "!"
 	return err
 }
 
