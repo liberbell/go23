@@ -22,7 +22,7 @@ func Server(apikey, sign string, data []byte) {
 
 func main() {
 	const apiKey = "User1Key"
-	const apiSecret = "User2Secret"
+	const apiSecret = "User1Secret"
 	data := []byte("data")
 
 	h := hmac.New(sha256.New, []byte(apiSecret))
