@@ -19,6 +19,7 @@ func lognProcess(ctx context.Context) {
 	isAcquire := s.TryAcquire(1)
 	if isAcquire {
 		fmt.Println("Could not get lock")
+		return
 	}
 	fmt.Println("Wait...")
 	time.Sleep(1 * time.Second)
