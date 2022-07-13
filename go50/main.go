@@ -17,6 +17,7 @@ func Server(apikey, sign string, data []byte) {
 	h := hmac.New(sha256.New, []byte(apiSecret))
 	h.Write(data)
 	expectedHMAC := hex.EncodeToString(h.Sum(nil))
+	fmt.Println(sign == expectedHMAC)
 }
 
 func main() {
