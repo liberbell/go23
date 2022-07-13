@@ -26,4 +26,6 @@ func main() {
 	// fmt.Println(h)
 	sign := hex.EncodeToString(h.Sum(nil))
 	fmt.Println(sign)
+
+	Server(apiKey, sign, data)
 }
