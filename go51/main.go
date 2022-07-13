@@ -15,6 +15,7 @@ func lognProcess(ctx context.Context) {
 		fmt.Println(err)
 		return
 	}
+	defer s.Release(1)
 	fmt.Println("Wait...")
 	time.Sleep(1 * time.Second)
 	fmt.Println("Done.")
