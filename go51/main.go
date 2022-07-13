@@ -4,9 +4,17 @@ import (
 	"context"
 	"fmt"
 	"time"
+
+	"golang.org/x/sync/semaphore"
 )
 
+var s *semaphore.Weighted = semaphore.NewWeighted(1)
+
 func lognProcess(ctx context.Context) {
+	if err := s.Acquire(ctx, 1); err != nil {
+		fmt.Println(err)
+		return
+	}
 	fmt.Println("Wait...")
 	time.Sleep(1 * time.Second)
 	fmt.Println("Done.")
