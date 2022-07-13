@@ -14,6 +14,9 @@ var DB = map[string]string{
 
 func Server(apikey, sign string, data []byte) {
 	apiSecret := DB[apikey]
+	h := hmac.New(sha256.New, []byte(apiSecret))
+	h.Write(data)
+	expectedHMAC := hex.EncodeToString(h.Sum(nil))
 }
 
 func main() {
