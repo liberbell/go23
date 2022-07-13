@@ -12,12 +12,17 @@ var DB = map[string]string{
 	"User2Key": "User2Secret",
 }
 
+func Server(apikey, sign string, data []byte) {
+	apiSecret := DB[apikey]
+}
+
 func main() {
 	const apiKey = "User1Key"
-	const apiSecret = "User1Secret"
+	const apiSecret = "User2Secret"
+	data := []byte("data")
 
 	h := hmac.New(sha256.New, []byte(apiSecret))
-	h.Write([]byte("data"))
+	h.Write(data)
 	// fmt.Println(h)
 	sign := hex.EncodeToString(h.Sum(nil))
 	fmt.Println(sign)
