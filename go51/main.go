@@ -31,5 +31,7 @@ func main() {
 	go lognProcess(ctx)
 	go lognProcess(ctx)
 	go lognProcess(ctx)
+	time.Sleep(2 * time.Second)
+	go lognProcess(ctx)
 	time.Sleep(5 * time.Second)
 }
