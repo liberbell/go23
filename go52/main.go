@@ -13,6 +13,7 @@ var Config Configlist
 func init() {
 	cfg, _ := ini.Load("config.init")
 	Config = Configlist{
-		Port: cfg.Section("web").Key("port").MustInt(),
+		Port:   cfg.Section("web").Key("port").MustInt(),
+		DbName: cfg.Section("db").Key("name").MustString("example.sql"),
 	}
 }
