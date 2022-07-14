@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"gopkg.in/go-ini/ini.v1"
 )
 
@@ -15,7 +13,7 @@ type Configlist struct {
 var Config Configlist
 
 func init() {
-	cfg, _ := ini.Load("config.init")
+	cfg, _ := ini.Load("config.ini")
 	Config = Configlist{
 		Port:      cfg.Section("web").Key("port").MustInt(),
 		DBname:    cfg.Section("db").Key("name").MustString("example.sql"),
@@ -24,7 +22,7 @@ func init() {
 }
 
 func main() {
-	fmt.Printf("%T %v\n", Config.Port, Config.Port)
-	fmt.Printf("%T %v\n", Config.DBname, Config.DBname)
-	fmt.Printf("%T %v\n", Config.SQLDriver, Config.SQLDriver)
+	// fmt.Printf("%T %v\n", Config.Port, Config.Port)
+	// fmt.Printf("%T %v\n", Config.DBname, Config.DBname)
+	// fmt.Printf("%T %v\n", Config.SQLDriver, Config.SQLDriver)
 }
