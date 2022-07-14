@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"gopkg.in/go-ini/ini.v1"
 )
 
@@ -22,7 +24,7 @@ func init() {
 }
 
 func main() {
-	// fmt.Printf("%T %v\n", Config.Port, Config.Port)
-	// fmt.Printf("%T %v\n", Config.DBname, Config.DBname)
-	// fmt.Printf("%T %v\n", Config.SQLDriver, Config.SQLDriver)
+	fmt.Printf("%T %v\n", Config.Port, Config.Port)
+	fmt.Printf("%T %v\n", Config.DBname, Config.DBname)
+	fmt.Printf("%T %v\n", Config.SQLDriver, Config.SQLDriver)
 }
