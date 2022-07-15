@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"net/url"
+
+	"github.com/gorilla/websocket"
 )
 
 type JsonRPC2 struct {
