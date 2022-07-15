@@ -14,4 +14,7 @@ func main() {
 	fmt.Print(spy.CSV())
 	rsi2 := talib.Rsi(spy.Close, 2)
 	fmt.Println(rsi2)
+
+	mva := talib.Ema(spy.Close, 2)
+	fmt.Println(mva)
 }
