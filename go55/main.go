@@ -9,6 +9,11 @@ import (
 
 var DbConnection *sql.DB
 
+type Person struct {
+	Name string
+	Age  int
+}
+
 func main() {
 	DbConnection, _ := sql.Open("sqlite3", "./example.sql")
 	defer DbConnection.Close()
@@ -22,14 +27,17 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	cmd = `INSERT INTO person (name, age) VALUES (?, ?)`
-	_, err = DbConnection.Exec(cmd, "Alex", 32)
-	if err != nil {
-		log.Fatalln(err)
-	}
+	// cmd = `INSERT INTO person (name, age) VALUES (?, ?)`
+	// _, err = DbConnection.Exec(cmd, "Alex", 32)
+	// if err != nil {
+	// 	log.Fatalln(err)
+	// }
 	// 	cmd = `UPDATE person SET age = ? WHERE name = ?`
 	// 	_, err = DbConnection.Exec(cmd, 82, "Eric")
 	// 	if err != nil {
 	// 		log.Fatalln(err)
 	// 	}
+	cmd = `SELECT * FROM person`
+	rows, _ := DbConnection.Query(cmd)
+	defer rows.Close()
 }
