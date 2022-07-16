@@ -54,14 +54,14 @@ func main() {
 	// 	fmt.Println(p.Name, p.Age)
 	// }
 	cmd = `SELECT * FROM person where age = ?`
-	row := DbConnection.QueryRow(cmd, 32)
+	row := DbConnection.QueryRow(cmd, 320)
 	var p Person
 	err = row.Scan(&p.Name, &p.Age)
 	if err != nil {
 		if err == sql.ErrNoRows {
-			log.Panicln("No row!")
+			log.Println("No row!")
 		} else {
-			log.Panicln(err)
+			log.Println(err)
 		}
 	}
 	fmt.Println(p.Name, p.Age)
