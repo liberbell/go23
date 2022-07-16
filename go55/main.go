@@ -22,14 +22,14 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	// cmd = `INSERT INTO person (name, age) VALUES (?, ?)`
-	// _, err = DbConnection.Exec(cmd, "Alex", 32)
-	// if err != nil {
-	// 	log.Fatalln(err)
-	// }
-	cmd = `UPDATE person SET age = ? WHERE name = ?`
-	_, err = DbConnection.Exec(cmd, 82, "Eric")
+	cmd = `INSERT INTO person (name, age) VALUES (?, ?)`
+	_, err = DbConnection.Exec(cmd, "Alex", 32)
 	if err != nil {
 		log.Fatalln(err)
 	}
+	// 	cmd = `UPDATE person SET age = ? WHERE name = ?`
+	// 	_, err = DbConnection.Exec(cmd, 82, "Eric")
+	// 	if err != nil {
+	// 		log.Fatalln(err)
+	// 	}
 }
