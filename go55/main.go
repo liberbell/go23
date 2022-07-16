@@ -22,7 +22,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	cmd = `INSERT INTO person (name, age) VALUE (?, ?)`
+	cmd = `INSERT INTO person (name, age) VALUES (?, ?)`
 	_, err = DbConnection.Exec(cmd, "Eric", 72)
 	if err != nil {
 		log.Fatalln(err)
