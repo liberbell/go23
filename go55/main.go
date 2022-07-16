@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -48,5 +49,8 @@ func main() {
 			log.Println(err)
 		}
 		pp = append(pp, p)
+	}
+	for _, p := range pp {
+		fmt.Println(p.Name, p.Age)
 	}
 }
