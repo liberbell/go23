@@ -13,7 +13,7 @@ func main() {
 	DbConnection, _ := sql.Open("sqlite3", "./example.sql")
 	defer DbConnection.Close()
 
-	cmd = `CREATE TABLE IF NOT EXISTS person(
+	cmd := `CREATE TABLE IF NOT EXISTS person(
 		name STRING,
 		age INT)`
 
