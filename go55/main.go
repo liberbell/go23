@@ -72,6 +72,32 @@ func main() {
 	// 	log.Fatalln(err)
 	// }
 
-	tablename := "person"
-	cmd = fmt.Sprintf("SELECT * FROM %s", tablename)
+	tableName := "person"
+	cmd = fmt.Sprintf("SELECT * FROM %s", tableName)
+	rows, _ := DbConnection.Query(cmd)
+	defer rows.Close()
+	var pp []Person
+	for rows.Next() {
+		var p Person
+		err := rows.Scan(&p.Name, &p.Age)
+		if err != nil {
+			log.Println(err)
+		}
+		pp = append(pp, p)
+	}
+	for _, p := range pp {
+		fmt.Println(p.Name, p.Age)
+	}
+	cmd = `SELECT * FROM person where age = ?`
+	row := DbConnection.QueryRow(cmd, 320)
+	var p Person
+	err = row.Scan(&p.Name, &p.Age)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			log.Println("No row!")
+		} else {
+			log.Println(err)
+		}
+	}
+	fmt.Println(p.Name, p.Age)
 }
