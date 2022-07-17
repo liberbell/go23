@@ -74,7 +74,7 @@ func main() {
 
 	// tableName := "person; INSERT INTO person (name, age) VALUES ('MR.X', 100);"
 	// cmd = fmt.Sprintf("SELECT * FROM %s", tableName)
-	cmd = `SELECT * FROM ?`
+	cmd = `SELECT * FROM table = ?`
 	rows, _ := DbConnection.Query(cmd, "person")
 	defer rows.Close()
 	var pp []Person
