@@ -1,6 +1,9 @@
 package main
 
-import "io/ioutil"
+import (
+	"fmt"
+	"io/ioutil"
+)
 
 type Page struct {
 	Title string
@@ -24,4 +27,7 @@ func loadPage(title string) (*Page, error) {
 func main() {
 	p1 := &Page{Title: "Test", Body: []byte("This is a sample page.")}
 	p1.save()
+
+	p2, _ := loadPage(p1.Title)
+	fmt.Println(string(p2.Body))
 }
