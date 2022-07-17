@@ -18,6 +18,7 @@ func loadPage(title string) (*Page, error) {
 	if err != nil {
 		return nil, err
 	}
+	return &Page{Title: title, Body: body}, nil
 }
 
 func main() {
