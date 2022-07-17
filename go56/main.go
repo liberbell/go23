@@ -11,3 +11,8 @@ func (p *Page) save() error {
 	filename := p.Title + ".txt"
 	return ioutil.WriteFile(filename, p.Body, 0600)
 }
+
+func main() {
+	p1 := &Page{Title: "Test", Body: []byte("This is a sample page.")}
+	p1.save()
+}
