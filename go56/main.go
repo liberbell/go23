@@ -14,6 +14,10 @@ func (p *Page) save() error {
 
 func loadPage(title string) (*Page, error) {
 	filename := title + ".txt"
+	body, err := ioutil.ReadFile(filename)
+	if err != nil {
+		return nil, err
+	}
 }
 
 func main() {
