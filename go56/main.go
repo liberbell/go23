@@ -12,6 +12,10 @@ func (p *Page) save() error {
 	return ioutil.WriteFile(filename, p.Body, 0600)
 }
 
+func loadPage(title string) (*Page, error) {
+	filename := title + ".txt"
+}
+
 func main() {
 	p1 := &Page{Title: "Test", Body: []byte("This is a sample page.")}
 	p1.save()
