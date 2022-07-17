@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -65,9 +66,12 @@ func main() {
 	// }
 	// fmt.Println(p.Name, p.Age)
 
-	cmd = `DELETE FROM person WHERE name = ?`
-	_, err = DbConnection.Exec(cmd, "Alex")
-	if err != nil {
-		log.Fatalln(err)
-	}
+	// cmd = `DELETE FROM person WHERE name = ?`
+	// _, err = DbConnection.Exec(cmd, "Alex")
+	// if err != nil {
+	// 	log.Fatalln(err)
+	// }
+
+	tablename := "person"
+	cmd = fmt.Sprintf("SELECT * FROM %s", tablename)
 }
