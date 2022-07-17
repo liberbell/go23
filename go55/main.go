@@ -72,9 +72,10 @@ func main() {
 	// 	log.Fatalln(err)
 	// }
 
-	tableName := "person; INSERT INTO person (name, age) VALUES ('MR.X', 100);"
-	cmd = fmt.Sprintf("SELECT * FROM %s", tableName)
-	rows, _ := DbConnection.Query(cmd)
+	// tableName := "person; INSERT INTO person (name, age) VALUES ('MR.X', 100);"
+	// cmd = fmt.Sprintf("SELECT * FROM %s", tableName)
+	cmd = `SELECT * FROM ?`
+	rows, _ := DbConnection.Query(cmd, "person")
 	defer rows.Close()
 	var pp []Person
 	for rows.Next() {
