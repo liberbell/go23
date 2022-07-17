@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"fmt"
 	"log"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -53,16 +52,22 @@ func main() {
 	// for _, p := range pp {
 	// 	fmt.Println(p.Name, p.Age)
 	// }
-	cmd = `SELECT * FROM person where age = ?`
-	row := DbConnection.QueryRow(cmd, 320)
-	var p Person
-	err = row.Scan(&p.Name, &p.Age)
+	// cmd = `SELECT * FROM person where age = ?`
+	// row := DbConnection.QueryRow(cmd, 320)
+	// var p Person
+	// err = row.Scan(&p.Name, &p.Age)
+	// if err != nil {
+	// 	if err == sql.ErrNoRows {
+	// 		log.Println("No row!")
+	// 	} else {
+	// 		log.Println(err)
+	// 	}
+	// }
+	// fmt.Println(p.Name, p.Age)
+
+	cmd = `DELETE FROM person WHERE name = ?`
+	_, err = DbConnection.Exec(cmd, "Alex")
 	if err != nil {
-		if err == sql.ErrNoRows {
-			log.Println("No row!")
-		} else {
-			log.Println(err)
-		}
+		log.Fatalln(err)
 	}
-	fmt.Println(p.Name, p.Age)
 }
