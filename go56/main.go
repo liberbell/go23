@@ -38,6 +38,14 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "view", p)
 }
 
+func editHnadler(w http.ResponseWriter, r *http.Request) {
+	title := r.URL.Path[len("/edit/"):]
+	p, err := loadPage(title)
+	if err != nil {
+		p = &Page{Title: title}
+	}
+}
+
 func main() {
 	// p1 := &Page{Title: "Test", Body: []byte("This is a sample page.")}
 	// p1.save()
