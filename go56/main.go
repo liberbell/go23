@@ -44,6 +44,7 @@ func editHnadler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		p = &Page{Title: title}
 	}
+	renderTemplate(w, "edit", p)
 }
 
 func main() {
