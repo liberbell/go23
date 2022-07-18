@@ -25,11 +25,16 @@ func loadPage(title string) (*Page, error) {
 	return &Page{Title: title, Body: body}, nil
 }
 
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+	title := r.URL.Path
+}
+
 func main() {
 	// p1 := &Page{Title: "Test", Body: []byte("This is a sample page.")}
 	// p1.save()
 
 	// p2, _ := loadPage(p1.Title)
 	// fmt.Println(string(p2.Body))
+	http.HandleFunc("/view", viewHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
