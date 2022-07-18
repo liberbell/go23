@@ -54,6 +54,6 @@ func main() {
 	// p2, _ := loadPage(p1.Title)
 	// fmt.Println(string(p2.Body))
 	http.HandleFunc("/view/", viewHandler)
-	http.HandleFunc("/edit/", viewHandler)
+	http.HandleFunc("/edit/", editHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
