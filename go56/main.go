@@ -70,7 +70,7 @@ func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
 }
 
 func makeHandler(fn func(http.ResponseWriter, *http.Request, string)) http.HandlerFunc {
-
+	return func(w http.ResponseWritr, r *http.Request)
 }
 
 func main() {
