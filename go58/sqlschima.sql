@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS 'employee' (
     'city' VARCHAR(20) DEFAULT 'fredericton',
     'dept' VARCHAR(20) DEFAULT 'onbording',
     PRIMARY KEY ('id')
-) ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT=utf8mb4;
+) ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;
