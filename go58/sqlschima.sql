@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS 'employee' (
     'name' VARCHAR(20),
     'city' VARCHAR(20) DEFAULT 'fredericton',
     'dept' VARCHAR(20) DEFAULT 'onbording',
-    PRIMARY KEY 'id'
+    PRIMARY KEY ('id')
 ) ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT=utf8mb4;
