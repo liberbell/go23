@@ -1,8 +1,8 @@
 USE 'company';
 
 INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('joe', 'fredericton', 'sales');
-INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('joe', 'boston', 'development');
-INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('joe', 'toronto', 'development');
+INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('jil', 'boston', 'development');
+INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('alex', 'toronto', 'development');
 INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('anna', 'new york', 'development');
 INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('ben', 'houston', 'sales');
 INSERT INTO 'company'.'employees' ('name', 'city', 'dept') VALUES ('eve', 'tampa', 'operations');
